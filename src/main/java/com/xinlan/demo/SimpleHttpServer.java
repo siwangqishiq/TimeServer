@@ -37,5 +37,11 @@ public class SimpleHttpServer {
             workerGroup.shutdownGracefully();
             bossGroup.shutdownGracefully();
         }
+
+
+        ServerBootstrap s = new ServerBootstrap();
+        s.group(null , null);
+        s.channel(NioServerSocketChannel.class);
+        //s.childHandler()
     }
 }//end class
